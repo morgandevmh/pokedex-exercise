@@ -1,0 +1,94 @@
+:root {
+    --main-color-1: ;
+    --main-color-2: ;
+
+    --font-size-title: ;
+    --font-size-text: ;
+    --font-size-text-2: ;
+
+    --shadow-1: ;
+    --shadow-2: ;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.pokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokedex-top-part, .pokedex-bottom-part {
+    height : 200px;
+    width: 500px;
+    background-color: darkred;
+}
+
+.pokedex-center-part{
+    height: 400px;
+    width: 450px;
+    background-color:deepskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pokedex-container{
+    height: 330px;
+    width: 450px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-sprites {
+    height: 200px;
+    width: 300px ;
+    object-fit: contain;
+}
+
+
+#pokedex-container p {
+    color: black;
+}
+
+.poke-category{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-img-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.poke-category img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.btn-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.right-btn, .left-btn {
+    height: 50px;
+    width: 170px;
+    margin: 10px;
+}
+
+
+
+
+
