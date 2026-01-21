@@ -12,15 +12,16 @@ fetch("https://tyradex.vercel.app/api/v1/pokemon")
         return res.json();
     })
     .then(data => {
-        dataArr = data;
-        displayPokemon(0);
+        dataArr = data.filter(pokemon => pokemon.pokedex_id !== 0);
+        currentIndex = 0;
+        displayPokemon(currentIndex);
     })
     .catch(error => {
         pokedexContainer.innerHTML = `<p>Erreur : ${error.message}</p>`;
     });
 
 const displayPokemon = (index) =>{
-    const pokemon = dataArr[6];
+    const pokemon = dataArr[index];
     
     pokedexContainer.innerHTML = `
         <div class="pokemon-card">
@@ -34,6 +35,23 @@ const displayPokemon = (index) =>{
         </div>
     `;
 };
+
+leftBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex >= dataArr.length) {
+        currentIndex = 0;
+    }
+    displayPokemon(currentIndex);
+});
+
+rightBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = dataArr.length - 1;
+    }
+    displayPokemon(currentIndex);
+});
+
 
 
 
