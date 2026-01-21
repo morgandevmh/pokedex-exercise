@@ -36,7 +36,7 @@ const displayPokemon = (index) =>{
     `;
 };
 
-leftBtn.addEventListener("click", () => {
+rightBtn.addEventListener("click", () => {
     currentIndex++;
     if (currentIndex >= dataArr.length) {
         currentIndex = 0;
@@ -44,7 +44,7 @@ leftBtn.addEventListener("click", () => {
     displayPokemon(currentIndex);
 });
 
-rightBtn.addEventListener("click", () => {
+leftBtn.addEventListener("click", () => {
     currentIndex--;
     if (currentIndex < 0) {
         currentIndex = dataArr.length - 1;

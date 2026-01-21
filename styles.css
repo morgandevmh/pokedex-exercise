@@ -15,31 +15,97 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: lightgray;
+}
+
+
+/*pkedex style general*/
 .pokedex {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 .pokedex-top-part, .pokedex-bottom-part {
-    height : 200px;
+    height : 22vh;
     width: 500px;
     background-color: darkred;
+    box-shadow: 0 0 0 4px black;
+    z-index: 2;
+}
+.pokedex-top-part{
+    border-radius: 25px  25px 5px 5px;
+    border-bottom: 10px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.pokedex-bottom-part{
+    border-radius: 5px 5px 25px  25px;
+    border-top: 10px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-circle{
+    width: 200px;
+    height: 100px;
+    background-color: whitesmoke;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.small-top-circle {
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;     
+}
+
+.bottom-circle{
+    width: 200px;
+    height: 100px;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-startz;
+}
+
+.small-bottom-circle{
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px; 
+    display: flex;
+
 }
 
 .pokedex-center-part{
-    height: 400px;
-    width: 450px;
+    height: 56vh;
+    width: 475px;
     background-color:deepskyblue;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+/*pokedex container + informations */
 #pokedex-container{
     height: 330px;
     width: 450px;
-    border: 5px solid black;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +115,7 @@
     height: 200px;
     width: 300px ;
     object-fit: contain;
+    margin: 10px;
 }
 
 
@@ -74,6 +141,8 @@
     object-fit: cover;
 }
 
+
+/* btn */
 .btn-section {
     display: flex;
     flex-direction: row;
@@ -86,6 +155,8 @@
     height: 50px;
     width: 170px;
     margin: 10px;
+    background-color: rgb(51, 204, 255);
+    border-radius: 10px
 }
 
 
