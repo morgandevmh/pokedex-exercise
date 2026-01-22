@@ -98,36 +98,66 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
 }
 
 
-/*pokedex container + informations */
+/*pokedex container */
 #pokedex-container{
     height: 330px;
     width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+
+.img-description-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*pok-imgs*/
 .img-sprites {
-    height: 200px;
-    width: 300px ;
+    height: 150px;
+    width: 240px ;
     object-fit: contain;
-    margin: 10px;
+    margin: 5px;
+
+    border-radius: 50%;
 }
 
 
-#pokedex-container p {
-    color: black;
+/*poke-description*/
+.poke-description {
+    height: 30px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+}
+.poke-description h1 {
+    text-align: center;
+    font-size: 1.3rem;
 }
 
-.poke-category{
+/*poke-types*/
+.poke-types{
+    height: auto;
+    min-width: 200px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+
+    margin: 5px;
 }
 
 .category-img-container {
@@ -135,10 +165,49 @@ body {
     flex-direction: row;
 }
 
-.poke-category img {
+.poke-types img {
     height: 30px;
     width: 30px;
     object-fit: cover;
+}
+
+/*pke-talents et stats */
+.talents-stats-container {
+    height: 70px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*poke talents */
+.poke-talents {
+    height: 70px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+.poke-talents p {
+line-height: 0.1;
+font-size: 0.8rem;
+}
+
+/*poke-stats*/
+.poke-stats {
+    height: 70px;
+    width: 200px;
+
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.poke-stats ul li {
+    font-size: 0.7rem;
 }
 
 
@@ -156,7 +225,8 @@ body {
     width: 170px;
     margin: 10px;
     background-color: rgb(51, 204, 255);
-    border-radius: 10px
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 

@@ -25,13 +25,45 @@ const displayPokemon = (index) =>{
     
     pokedexContainer.innerHTML = `
         <div class="pokemon-card">
-            <img class="img-sprites"src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
-            <p class="poke-name">${pokemon.name.fr}</p>
-            <p class="poke-num">#${pokemon.pokedex_id}</p>
-            <div class="poke-category">
+
+        <div class="img-description-container">
+           <div class="poke-description">
+             <h1 class="poke-name">${pokemon.name.fr}</h1>
+             <p class="poke-num">n°${pokemon.pokedex_id}</p>
+             <p class="poke-generation">Generation: ${pokemon.generation}</p>
+             <p class="poke-category">${pokemon.category}</p>
+            </div>
+
+            <divclass="poke-imgs">
+              <img class="img-sprites"src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
+              <div class="poke-evo"></div>
+            </div>
+
+
+
+            <div class="poke-types">
             ${pokemon.types.map(type => `<img src="${type.image}" alt="${type.name}" title="${type.name}">`).join('')}
             ${pokemon.types.map(type => type.name).join(' / ')}
             </div>
+
+            <div class="talents-stats-container">
+            <div class="poke-talents">
+              ${pokemon.talents.map(talent => `<p> Talents: ${talent.name}</p>`).join('')}
+            </div>
+            
+              <div class="poke-stats">
+              Statistiques:
+                <ul class="stats-list">
+                 <li class="s-hp">HP: ${pokemon.stats.hp}</li>
+                 <li class="s-att">ATK: ${pokemon.stats.atk}</li>
+                 <li class="s-def">DEF: ${pokemon.stats.def}</li>
+                 <li class="s-spe-att">SPE ATK: ${pokemon.stats.spe_atk}</li>
+                 <li class="s-spe-def">SPE DEF: ${pokemon.stats.spe_def}</li>
+                 <li class="s-speed">SPEED: ${pokemon.stats.vit}</li>
+                </ul>
+               </div>
+            </div>
+            
         </div>
     `;
 };
