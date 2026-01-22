@@ -29,9 +29,11 @@ const displayPokemon = (index) =>{
         <div class="img-description-container">
            <div class="poke-description">
              <h1 class="poke-name">${pokemon.name.fr}</h1>
+             <div class="p-container">
              <p class="poke-num">n°${pokemon.pokedex_id}</p>
              <p class="poke-generation">Generation: ${pokemon.generation}</p>
              <p class="poke-category">${pokemon.category}</p>
+             </div>
             </div>
 
             <divclass="poke-imgs">

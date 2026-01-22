@@ -1,6 +1,7 @@
 :root {
     --main-color-1: ;
-    --main-color-2: ;
+    --main-color-2: rgb(89, 208, 248);
+    --sec-color-1: rgb(0, 191, 255);
 
     --font-size-title: ;
     --font-size-text: ;
@@ -17,6 +18,7 @@
 
 body {
     background-color: lightgray;
+    font-family: "Audiowide", sans-serif;
 }
 
 
@@ -32,12 +34,12 @@ body {
     height : 22vh;
     width: 500px;
     background-color: darkred;
-    box-shadow: 0 0 0 4px black;
     z-index: 2;
 }
 .pokedex-top-part{
     border-radius: 25px  25px 5px 5px;
-    border-bottom: 10px solid whitesmoke;
+    border: 4px solid black;
+
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -45,7 +47,8 @@ body {
 
 .pokedex-bottom-part{
     border-radius: 5px 5px 25px  25px;
-    border-top: 10px solid whitesmoke;
+    border: 4px solid black;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -54,7 +57,10 @@ body {
 .top-circle{
     width: 200px;
     height: 100px;
-    background-color: whitesmoke;
+    background-color: black;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     display: flex;
@@ -65,26 +71,31 @@ body {
 .small-top-circle {
     width: 120px;
     height: 60px;
-    background-color: black;
+    box-shadow: 0 0 0 4px var(--main-color-2);
+    background-color: var(--main-color-2);
     border-top-left-radius: 60px;
-    border-top-right-radius: 60px;     
+    border-top-right-radius: 60px;    
 }
 
 .bottom-circle{
     width: 200px;
     height: 100px;
-    background-color: whitesmoke;
+    background-color: black;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     display: flex;
     justify-content: center;
-    align-items: flex-startz;
+    align-items: flex-start;
 }
 
 .small-bottom-circle{
     width: 120px;
     height: 60px;
-    background-color: black;
+    box-shadow: 0 0 0 4px var(--main-color-2);
+    background-color: var(--main-color-2);
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px; 
     display: flex;
@@ -94,7 +105,7 @@ body {
 .pokedex-center-part{
     height: 56vh;
     width: 475px;
-    background-color:deepskyblue;
+    background-color:var(--main-color-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,32 +129,52 @@ body {
     align-items: center;
 }
 
+
+/*poke-description*/
+.poke-description {
+    height: 40px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 2px solid royalblue;
+    background-color: var(--sec-color-1);
+    border-radius: 15px;
+
+}
+
+.poke-description h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+}
+.p-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.p-container p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+
+}
+
 /*pok-imgs*/
 .img-sprites {
     height: 150px;
     width: 240px ;
     object-fit: contain;
     margin: 5px;
-
     border-radius: 50%;
-}
 
-
-/*poke-description*/
-.poke-description {
-    height: 30px;
-    width: 400px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 5px;
-}
-.poke-description h1 {
-    text-align: center;
-    font-size: 1.3rem;
 }
 
 /*poke-types*/
@@ -156,8 +187,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     margin: 5px;
+    border: 2px solid pink;
+    background-color: var(--sec-color-1);
+    border-radius: 10px;
+    font-size: 0.9rem;
 }
 
 .category-img-container {
@@ -173,41 +207,63 @@ body {
 
 /*pke-talents et stats */
 .talents-stats-container {
-    height: 70px;
+    height: 65px;
     width: 400px;
-
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    border: 2px solid green;
+    border-radius: 20px;
+    background-color: var(--sec-color-1);
+    padding-left: 10px;
+    padding-right: 20px;
+
 }
 
 /*poke talents */
 .poke-talents {
-    height: 70px;
+    height: 50px;
     width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0;
+
 }
 .poke-talents p {
 line-height: 0.1;
-font-size: 0.8rem;
+font-size: 0.6rem;
 }
 
 /*poke-stats*/
 .poke-stats {
-    height: 70px;
+    height: 50px;
     width: 200px;
-
     font-size: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-}
-.poke-stats ul li {
+
     font-size: 0.7rem;
+}
+
+.poke-stats ul{
+    display: grid;
+
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: 20px;
+    
+
+}
+
+.poke-stats ul li {
+    font-size: 0.5rem;
+    max-width: 80px;
+    max-height: 20px;
+    list-style: none;
+
 }
 
 
