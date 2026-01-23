@@ -27,6 +27,7 @@ const displayPokemon = (index) =>{
         <div class="pokemon-card">
 
         <div class="img-description-container">
+
            <div class="poke-description">
              <h1 class="poke-name">${pokemon.name.fr}</h1>
              <div class="p-container">
@@ -36,12 +37,10 @@ const displayPokemon = (index) =>{
              </div>
             </div>
 
-            <divclass="poke-imgs">
+            <div class="poke-imgs">
               <img class="img-sprites"src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
-              <div class="poke-evo"></div>
+              
             </div>
-
-
 
             <div class="poke-types">
             ${pokemon.types.map(type => `<img src="${type.image}" alt="${type.name}" title="${type.name}">`).join('')}
