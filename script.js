@@ -29,17 +29,16 @@ const displayPokemon = (index) =>{
         <div class="img-description-container">
 
            <div class="poke-description">
-             <h1 class="poke-name">${pokemon.name.fr}</h1>
-             <div class="p-container">
-             <p class="poke-num">n°${pokemon.pokedex_id}</p>
-             <p class="poke-generation">Generation: ${pokemon.generation}</p>
-             <p class="poke-category">${pokemon.category}</p>
-             </div>
+               <h1 class="poke-name">${pokemon.name.fr}</h1>
+               <div class="p-container">
+                   <p class="poke-num">n°${pokemon.pokedex_id}</p>
+                   <p class="poke-generation">Generation&nbsp: ${pokemon.generation}</p>
+                   <p class="poke-category">${pokemon.category}</p>
+               </div>
             </div>
 
             <div class="poke-imgs">
-              <img class="img-sprites"src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
-              
+                <img class="img-sprites"src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
             </div>
 
             <div class="poke-types">
@@ -48,22 +47,21 @@ const displayPokemon = (index) =>{
             </div>
 
             <div class="talents-stats-container">
-            <div class="poke-talents">
-              ${pokemon.talents.map(talent => `<p> Talents: ${talent.name}</p>`).join('')}
-            </div>
+                <div class="poke-talents">
+                ${pokemon.talents.map(talent => `<p> Talents&nbsp: ${talent.name}</p>`).join('')}
+                </div>
             
-              <div class="poke-stats">
-              Statistiques:
-                <ul class="stats-list">
-                 <li class="s-hp">HP: ${pokemon.stats.hp}</li>
-                 <li class="s-att">ATK: ${pokemon.stats.atk}</li>
-                 <li class="s-def">DEF: ${pokemon.stats.def}</li>
-                 <li class="s-spe-att">SPE ATK: ${pokemon.stats.spe_atk}</li>
-                 <li class="s-spe-def">SPE DEF: ${pokemon.stats.spe_def}</li>
-                 <li class="s-speed">SPEED: ${pokemon.stats.vit}</li>
-                </ul>
+                <div class="poke-stats"> Statistiques:
+                    <ul class="stats-list">
+                        <li class="s-hp">HP&nbsp: ${pokemon.stats.hp}</li>
+                        <li class="s-att">ATK&nbsp: ${pokemon.stats.atk}</li>
+                        <li class="s-def">DEF&nbsp: ${pokemon.stats.def}</li>
+                        <li class="s-spe-att">SPE ATK&nbsp: ${pokemon.stats.spe_atk}</li>
+                        <li class="s-spe-def">SPE DEF&nbsp: ${pokemon.stats.spe_def}</li>
+                        <li class="s-speed">SPEED&nbsp: ${pokemon.stats.vit}</li>
+                    </ul>
                </div>
-            </div>
+             </div>
             
         </div>
     `;

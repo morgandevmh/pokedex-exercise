@@ -1,25 +1,33 @@
 :root {
-    --main-color-1: ;
+    /* couleurs principales */
+    --main-color-1: darkred;
     --main-color-2: white;
     --sec-color-1: rgb(0, 191, 255);
+    --bg-body: lightgray;
+    --color-black: black;
 
-    --font-size-title: ;
-    --font-size-text: ;
-    --font-size-text-2: ;
+    /* font sizes */
+    --font-size-title: 1.4rem;
+    --font-size-text: 0.8rem;
+    --font-size-text-2: 0.6rem;
 
-    --shadow-1: ;
-    --shadow-2: ;
-
+    /* shadows */
+    --shadow-1: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --shadow-inset-light: inset 2px 2px 4px rgba(255, 255, 255, 0.5);
+    --shadow-inset-dark: inset -2px -2px 4px rgba(255, 255, 255, 0.3);
 }
+
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: lightgray;
+    background-color: var(--bg-body);
     font-family: "Audiowide", sans-serif;
 }
+
 
 
 /*pkedex style general*/
@@ -32,12 +40,15 @@ body {
 }
 
 .pokedex-top-part, .pokedex-bottom-part {
-    height : 22vh;
-    width: 500px;
-    background-color: darkred;
+    height: 120px;
+    max-width: 500px;
+    width: 95%;
+    background-color: var(--main-color-1);
     z-index: 2;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),;
+    box-shadow: var(--shadow-1);
+    border: 4px solid var(--color-black);
 }
+
 
 .pokedex-top-part{
     border-radius: 25px  25px 5px 5px;
@@ -60,10 +71,10 @@ body {
 .top-circle{
     width: 200px;
     height: 100px;
-    background-color: black;
+    background-color: var(--color-black);
+    border-left: 4px solid var(--main-color-2);
+    border-right: 4px solid var(--main-color-2);
     border-top: 4px solid white;
-    border-left: 4px solid white;
-    border-right: 4px solid white;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     display: flex;
@@ -83,10 +94,10 @@ body {
 .bottom-circle{
     width: 200px;
     height: 100px;
-    background-color: black;
+    background-color: var(--color-black);
+    border-left: 4px solid var(--main-color-2);
+    border-right: 4px solid var(--main-color-2);
     border-bottom: 4px solid white;
-    border-left: 4px solid white;
-    border-right: 4px solid white;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     display: flex;
@@ -97,8 +108,8 @@ body {
 .small-bottom-circle{
     width: 100px;
     height: 50px;
+    background-color: var(--main-color-2);
     box-shadow: 0 0 0 4px var(--main-color-2);
-    background-color: white;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px; 
     display: flex;
@@ -106,22 +117,22 @@ body {
 }
 
 .pokedex-center-part {
-    height: 56vh;
+    min-height: 450px; 
+    height: auto; 
+    width: 470px;
     background: linear-gradient(135deg, #a8d8ff 0%, #7ec8ff 100%);
     position: relative;
     overflow: hidden;
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 2px 10px rgba(255, 255, 255, 0.3);
-       display: flex;
+    box-shadow: var(--shadow-1), inset 0 2px 10px rgba(255, 255, 255, 0.3);
+    display: flex;
     flex-direction: column;
     align-items: center;
-   padding: 5px;
+    padding: 5px;
 
 
 }
 
-     .pokedex-center-part::before {
+.pokedex-center-part::before {
     content: '';
     position: absolute;
     top: 0;
@@ -170,7 +181,8 @@ body {
 
 /*pokedex container */
 #pokedex-container{
-    height: 330px;
+    height: auto; 
+    min-height: 330px;
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -180,6 +192,7 @@ body {
 }
 
 .img-description-container{
+    width: 470px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,10 +217,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 
-       0 8px 32px rgba(0, 0, 0, 0.2),                   
-       inset 2px 2px 4px rgba(255, 255, 255, 0.5),       
-       inset -2px -2px 4px rgba(255, 255, 255, 0.3);  
+    box-shadow: var(--shadow-2), var(--shadow-inset-light), var(--shadow-inset-dark);
 
     border-radius: 15px;
 
@@ -215,7 +225,7 @@ body {
 
 .poke-description h1 {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: var(--font-size-title);
     padding: 0;
     margin: 0;
 }
@@ -231,7 +241,7 @@ body {
 .p-container p {
     padding: 0;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: var(--font-size-text);
 
 }
 
@@ -254,7 +264,6 @@ body {
 /*poke-types*/
 .poke-types{
     height: auto;
-    min-width: 200px;
     width: 400px;
     display: flex;
     flex-direction: row;
@@ -268,11 +277,8 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 
-       0 8px 32px rgba(0, 0, 0, 0.2),                   
-       inset 2px 2px 4px rgba(255, 255, 255, 0.5),       
-       inset -2px -2px 4px rgba(255, 255, 255, 0.3);   
-    
+    box-shadow: var(--shadow-2), var(--shadow-inset-light), var(--shadow-inset-dark);
+
     border-radius: 10px;
     font-size: 0.9rem;
 }
@@ -287,22 +293,19 @@ body {
 .talents-stats-container {
     height: 65px;
     width: 400px;
+
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid green;
 
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 
-       0 8px 32px rgba(0, 0, 0, 0.2),                   
-       inset 2px 2px 4px rgba(255, 255, 255, 0.5),       
-       inset -2px -2px 4px rgba(255, 255, 255, 0.3);     
-  
+    box-shadow: var(--shadow-2), var(--shadow-inset-light), var(--shadow-inset-dark);
+
     border-radius: 16px;
     padding-left: 15px;
     padding-right: 20px;
@@ -320,7 +323,7 @@ body {
 
 .poke-talents p {
 line-height: 0.1;
-font-size: 0.6rem;
+font-size: var(--font-size-text-2);
 }
 
 /*poke-stats*/
@@ -331,7 +334,7 @@ font-size: 0.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: var(--font-size-text-2);
 }
 
 .poke-stats ul{
@@ -380,11 +383,11 @@ font-size: 0.6rem;
 }
 
 .right-btn:hover {
-    transform: rotateY(180deg) scale(1.3);
+    transform: rotateY(180deg) scale(1.2);
 }
 
 .left-btn:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .right-btn:active {
@@ -393,7 +396,7 @@ font-size: 0.6rem;
 }
 
 .left-btn:active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: transform 0.1s ease-in-out;
 }
 
@@ -403,5 +406,47 @@ font-size: 0.6rem;
 
 
 
+@media (max-width: 600px) {
+    .pokedex {
+        transform: scale(0.85); 
+        transform-origin: center top;
+    }
 
+    .pokedex-top-part, .pokedex-bottom-part {
+        height: 120px;
+        max-width: 500px;
+        width: 400px;
+    }
+
+    .pokedex-center-part,  .img-description-container {
+        width: 370px;
+    }
+
+    .poke-description,  .talents-stats-container{
+        width: 300px;
+    }
+
+    .poke-types {
+        width: 280px;
+    }
+
+
+}
+
+@media (max-width: 450px) {
+    .pokedex {
+        transform: scale(0.7); 
+    }
+    body {
+        align-items: flex-start; 
+        padding-top: 20px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .pokedex {
+        transform: scale(0.6); 
+    }
+}
 
