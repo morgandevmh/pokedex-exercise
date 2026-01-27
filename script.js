@@ -51,7 +51,7 @@ const displayPokemon = (index) =>{
                 ${pokemon.talents.map(talent => `<p> Talents&nbsp: ${talent.name}</p>`).join('')}
                 </div>
             
-                <div class="poke-stats"> Statistiques:
+                <div class="poke-stats"> Statistiques&nbsp:
                     <ul class="stats-list">
                         <li class="s-hp">HP&nbsp: ${pokemon.stats.hp}</li>
                         <li class="s-att">ATK&nbsp: ${pokemon.stats.atk}</li>

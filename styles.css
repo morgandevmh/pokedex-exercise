@@ -19,7 +19,7 @@
 }
 
 
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -246,7 +246,6 @@ body {
 }
 
 /*pok-imgs*/
-
 .poke-imgs {
     display: flex;
     flex-direction: row;
