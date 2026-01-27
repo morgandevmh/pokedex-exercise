@@ -449,3 +449,52 @@ font-size: var(--font-size-text-2);
     }
 }
 
+/* ===== Types (badges) ===== */
+.type-badges{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+.type-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 10px;
+  border-radius:999px;
+  color:#fff;
+  font-weight:800;
+  font-size:0.85rem;
+  line-height:1;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Icône dans le badge */
+.type-badge img{
+  height:18px;
+  width:18px;
+  object-fit:cover;
+}
+
+/* Couleurs types */
+.type-normal     { background: #A8A77A; }
+.type-feu        { background: #EE8130; }
+.type-eau        { background: #6390F0; }
+.type-electrik   { background: #F7D02C; color:#222; }
+.type-plante     { background: #7AC74C; }
+.type-glace      { background: #96D9D6; color:#222; }
+.type-combat     { background: #C22E28; }
+.type-poison     { background: #A33EA1; }
+.type-sol        { background: #E2BF65; color:#222; }
+.type-vol        { background: #A98FF3; }
+.type-psy        { background: #F95587; }
+.type-insecte    { background: #A6B91A; color:#222; }
+.type-roche      { background: #B6A136; color:#222; }
+.type-spectre    { background: #735797; }
+.type-dragon     { background: #6F35FC; }
+.type-tenebres   { background: #705746; }
+.type-acier      { background: #B7B7CE; color:#222; }
+.type-fee        { background: #D685AD; color:#222; }
