@@ -2,13 +2,13 @@
 A learning exercise focused on working with APIs. This project involves creating a PokéDex that displays Pokémon information.
 
 ## 🎯 Objective
-**Main Goal**: Master the use of a REST API.  
+**Main Goal**: Master the use of an API.  
 **Context**: A front-end exercise to build a functional PokéDex using HTML, CSS, and JavaScript.
 
 ## 🛠 Technology used
 - HTML5
 - CSS3
-- JavaScript (ES6+)
+- JavaScript 
 
 ## 🤝 Contribution
 Contributions are welcome!
