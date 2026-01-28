@@ -47,8 +47,8 @@ const displayPokemon = (index) => {
                     <div class="p-container">
                     <p class="poke-num">n°${pokemon.pokedex_id}</p>
                     <p class="poke-generation">Generation&nbsp: ${pokemon.generation}</p>
-                    </div>
                     <p class="poke-category">${pokemon.category}</p>
+                    </div>
                     <button class="shiny-toggle-button" type="button" aria-label="Afficher la version chromatique">
                         <svg width="512" height="512" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
