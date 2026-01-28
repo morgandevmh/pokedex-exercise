@@ -68,9 +68,19 @@ const displayPokemon = (index) => {
                 <div class="poke-imgs">
                     <img class="img-sprites" src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}">
                 </div>
-                <div class="poke-types">
-                ${pokemon.types.map(type => `<img src="${type.image}" alt="${type.name}" title="${type.name}">`).join('')}
-                ${pokemon.types.map(type => type.name).join(' / ')}
+                <div class="type-badges">
+                   ${pokemon.types.map(type => {
+                       const classeType = type.name
+                       .toLowerCase()
+                       .normalize("NFD")         
+                       .replace(/[\u0300-\u036f]/g, "");
+                     return `
+                       <span class="type-badge type-${classeType}">
+                            <img src="${type.image}" alt="${type.name}">
+                            ${type.name}
+                         </span>
+                     `;
+                   }).join("")}
                 </div>
                 <div class="talents-stats-container">
                     <div class="poke-talents">
